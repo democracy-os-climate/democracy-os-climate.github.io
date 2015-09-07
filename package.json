@@ -1,0 +1,38 @@
+{
+  "private": true,
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "devDependencies": {
+    "autoprefixer-core": "^5.2.1",
+    "browser-sync": "^2.8.2",
+    "del": "^1.1.1",
+    "gulp": "^3.6.0",
+    "gulp-cache": "^0.2.2",
+    "gulp-csso": "^1.0.0",
+    "gulp-data": "^1.2.0",
+    "gulp-gh-pages": "^0.5.1",
+    "gulp-if": "^1.2.1",
+    "gulp-imagemin": "^2.0.0",
+    "gulp-inline-source": "^2.1.0",
+    "gulp-jade": "^1.0.1",
+    "gulp-jshint": "^1.5.3",
+    "gulp-less": "^3.0.3",
+    "gulp-load-plugins": "^1.0.0-rc.1",
+    "gulp-minify-html": "^1.0.4",
+    "gulp-postcss": "^6.0.0",
+    "gulp-prompt": "^0.1.2",
+    "gulp-sitemap": "^2.0.2",
+    "gulp-size": "^2.0.0",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-uglify": "^1.0.1",
+    "gulp-useref": "^1.0.2",
+    "jshint-stylish": "^2.0.1",
+    "jstransformer-markdown-it": "^0.1.0",
+    "main-bower-files": "^2.5.0",
+    "opn": "^3.0.2",
+    "url-regexp": "^1.0.2",
+    "wiredep": "^3.0.0-beta"
+  },
+  "dependencies": {}
+}

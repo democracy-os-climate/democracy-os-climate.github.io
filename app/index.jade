@@ -1,0 +1,150 @@
+extends layouts/page
+
+block content
+    
+    include includes/header
+    
+    section.container
+      :markdown-it
+        > **the first non national citizens debate on an international agreement**  
+        
+        # DemocracyOS, what is this?
+        
+        [DemocracyOS](http://democracyos.org) is an [Open Source Platform](https://github.com/democracyos) to argue, debate and vote on specific political issues, at a time when the internet has changed almost every aspects of everyday life, except for democracies. 
+        
+        Invented in 2012 by Argentinian developers and political scientists, the software is now being freely replicated all over the world. 
+    
+    section.container
+      .row.vertical-align
+        .col-xs-12.col-md-6
+          h3 Learn more about the platform
+          .media
+            .media-left
+              a(href='http://democracyos.org/')
+                img.media-object(src='images/icon-logo-sm.png')
+            .media-body
+              span The DemocracyOS foundation
+              a.btn.btn-primary.btn-xs(href='http://democracyos.org/') visit the website
+          .media
+            .media-left
+              a(href='https://github.com/DemocracyOS/app')
+                i.fa.fa-github.media-object.icon-sm
+            .media-body
+              span The application source code
+              a.btn.btn-primary.btn-xs(href='https://github.com/DemocracyOS/app') explore & download
+        
+        .col-xs-12.col-md-6
+          h3 Discover the <strong>Argentinian</strong> case study
+          .media
+            .media-left
+              a(href='http://democracyos.org/')
+                i.fa.fa-question-circle.media-object.icon-sm
+            .media-body
+              span How to make a Net Party ?
+              a.btn.btn-primary.btn-xs(href='http://www.slideshare.net/santisiri/how-to-make-a-net-party') download pdf document
+          .media
+            .media-left
+              a(href='http://democracyos.org/')
+                i.fa.fa-book.media-object.icon-sm
+            .media-body
+              span The Partido de la Red - a&nbsp;case&nbsp;study
+              a.btn.btn-primary.btn-xs(href='http://demo.democracyos.eu/files/Are-Net-Parties-Democratic.pdf') download pdf document
+              
+        
+    section.alt-color-set-01
+      .container
+        :markdown-it
+          # Paris Climate 2015, what about it?
+          
+          > “For a universal climate agreement”
+          
+          ...says the banner of [the French Government's COP21 website](http://www.cop21.gouv.fr/fr). 
+          
+          Indeed, the 21st Conference of the Parties is going to gather 195 worldwide representatives from November 30th to December 11th 2015. These Parties are committed to sign a universal climate agreement. To do so, they are working all year long on a draft meant to be negotiated and adopted at Paris Climate 2015. 
+          
+          Yet if this draft aims to be universal, then it must be recognized as such by the Parties' constituencies.
+          
+        p.punch-line So what's in the COP21 Negotiating Draft?
+    
+    section.alt-earth-mod
+      .container
+        div.img-with-caption.center-block
+          img.img-responsive.center-block(src='images/earth-mod.jpg')
+          div.caption
+            :markdown-it
+              derived from Philippe Squarzoni, Saisonbrune. *(Paris: Delcourt, 2012). p. 174.*  [Original scale 23°35cm](http://www.bdgest.com/prepub/Planches/1051_P3.jpg).  
+            a.btn-caption
+              i.fa.fa-info    
+        blockquote “99 TIMES OUT OF 100, WHEN WE SEE A PICTURE OF THE EARTH, IT'S THIS ONE”
+        :markdown-it
+          Philippe Squarzoni's cartoon speaks for itself. It says that 99 times out of 100, when we see a picture of the earth, it is this one smooth, plain and perfect image of the globe taken from space.
+            
+    section.container
+      :markdown-it
+        However, when we try to visually represent what the ongoing draft of the COP21 Negotiating Draft refers to, the image of the globe changes slightly. 
+        It looks like this: 
+    
+    section.container
+        div.img-with-caption.center-block
+          img.img-responsive.center-block(src='images/data-visu-capture.png')
+          div.caption
+            :markdown-it
+              [Tropes](http://www.tropes.fr/), [Gephi](http://gephi.github.io/),  
+              *References visualization of the AD HOC WORKING GROUP ON THE DURBAN PLATFORM FOR ENHANCED ACTION ADP.2015.4.  
+              Informal Note (Paris: Aout 2015).*  
+              [view full resolution](images/export-gephi-full.png)
+            a.btn-caption
+              i.fa.fa-info
+            
+    
+    section.container
+      p.punch-line A little bit more complex, right?
+          
+    
+    section.alt-color-set-01
+      .container
+        :markdown-it
+          # DemocracyOS Paris Climate 2015, what for?
+
+          To get 195 different Parties to adopt a universal climate agreement is a very complex task for the representatives as it is for their constituencies. To bring together 195 different conditions of survival is not that simple.
+          
+          Nonetheless, we think that this complexity shall not stop us. We want to become more sensitive with the issues at stake by experimenting collectively with the options listed in the draft and make visible the plurality of ways to represent a climate changing world.
+          
+          Therefore we imagined DemocracyOS and Climate issues becoming opportunities for each other. 
+    
+    section.container
+      :markdown-it
+        # Join the experiment  
+
+        - providing a non national platform to argue, debate and vote on international agreements and become more sensitive about the institutional responses to climate change.
+        - promoting a collective reading of the COP21 Negotiating Draft and bring it closer to the pluralities of our everyday lives.
+        - sharing the experience with the other DemocracyOS users because sometimes the content may be as Open Source as the code.
+    
+      
+    section.container
+      .row.vertical-align
+        .col-xs-12.col-md-4
+          .panel
+            img.icon-md(src='images/icon-logo-md.png')
+            :markdown-it
+              Debate and vote about the climate issues on our dedicated platform
+            a.btn.btn-primary.btn-block.btn-fixed-bottom(href='http://climat.democracyos.eu/') enter
+        .col-xs-12.col-md-4
+          .panel
+            i.fa.fa-book.icon-md
+            :markdown-it
+              Upload, share and download redistributable documentation with the community
+            a.btn.btn-default.btn-block.btn-fixed-bottom.disabled(href='http://democracyos.org/') COMING SOON
+        .col-xs-12.col-md-4
+          .panel
+            i.fa.fa-globe.icon-md
+            :markdown-it
+              Discover our peers' platforms to join the territorial debates
+            a.btn.btn-default.btn-block.btn-fixed-bottom.disabled(href='http://democracyos.org/') COMING SOON
+            
+            
+    include includes/footer        
+                  
+  // build:js scripts/index.js
+  script(src='scripts/index.js')
+  // endbuild
