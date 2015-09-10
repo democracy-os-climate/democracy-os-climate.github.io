@@ -178,7 +178,7 @@ gulp.task('default', ['clean'], function () {
 gulp.task('deploy', function() {
   return gulp.src('./dist/**/*')
     .pipe(ghPages({
-      branch : 'deploy-test',
+      branch : 'master',
       message: 'gulp deploy 0.1.0'
     }));
 });

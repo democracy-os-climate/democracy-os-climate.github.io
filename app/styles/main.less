@@ -35,9 +35,11 @@
 
 @body-bg:               #fff;
 @text-color:            @gray-dark;
+@text-color-inv:        white;
 
 @link-color:            @brand-primary;
 @link-hover-color:      extract(@grad-colors,1);
+@link-hover-color-inv:  extract(@grad-colors,5);
 
 .link-decoration() {
 	border-bottom: 1px dotted ;
@@ -155,10 +157,23 @@ a {
 		border-width: 0 ;
 }
 
+blockquote, .punch-line  {
+	font-family: @headings-font-family ;
+	font-size: 150% ;
+	border-left : none ;
+	text-align: center ;
+
+	.slab {
+		white-space: pre-line;
+	}
+
+}
+
 .container {
 
+	padding-left: 40px ;
+	padding-right: 40px ;
 	max-width: @screen-md ;
-	padding: 0 40px ;
 
 }
 
@@ -166,6 +181,8 @@ header {
 
 	background: url('../images/header-bg.png') top center no-repeat transparent ;
 	background-size: cover ;
+
+	padding-bottom: 70px ;
 
 	@media (max-width: @screen-sm-max ){
 		height: auto ;
@@ -219,12 +236,18 @@ header {
 
 	.logo{
 
-			margin: 100px auto 200px ;
+			margin-top: 80px ;
+			margin-bottom: 50px ;
 
 			@media (max-width: @screen-sm-max ){
-				margin: 50px auto 100px ;
+				margin: 50px auto 25px ;
 			}
 
+	}
+
+	blockquote, .punch-line {
+		color: @text-color-inv ;
+		text-shadow: 1px 1px 3px extract(@grad-colors,5);
 	}
 
 }
@@ -234,25 +257,40 @@ section {
 	z-index: 20 ;
 	background-color: white ;
 
-	margin: 50px auto ;
-	padding-top: 1px ;
+	padding-top: 50px ;
+	padding-bottom: 70px ;
+
+	.sub-section {
+		margin-top: 50px ;
+	}
 
 	h1 {
 		margin-top: 50px ;
 		margin-bottom: 35px ;
 		// text-align: center ;
+
+		&:first-child {
+			margin-top: 25px ;
+		}
+
+		@media (max-width: @screen-sm-max ){
+			font-size:  floor((@font-size-h1 * 0.8)); ;
+		}
+
+		@media (max-width: @screen-xs-max ){
+			text-align: center ;
+			font-size:  floor((@font-size-h1 * 0.6));
+		}
+
 	}
 
 	h3 {
+		margin-top: 0 ;
 		margin-bottom: 50px ;
 		// text-align: center ;
-	}
-
-	blockquote, .punch-line  {
-		font-family: @headings-font-family ;
-		font-size: 150% ;
-		border-left : none ;
-		text-align: center ;
+		@media (max-width: @screen-xs-max ){
+			text-align: center ;
+		}
 	}
 
 	.punch-line  {
@@ -270,7 +308,10 @@ section {
 
 		padding: 15px ;
 		border-radius: @border-radius-base ;
-		box-shadow: 1px 1px 4px 0 rgba(0,0,0,0.7);
+		border: 1px solid #CCCCCC ;
+		//	box-shadow: 1px 1px 4px 0 rgba(0,0,0,0.7);
+
+
 
 		.icon-sm {
 			.square(64px) ;
@@ -285,8 +326,8 @@ section {
 
 		.icon-md {
 			display: block;
-			.square(135px) ;
-			font-size: 135px ;
+			.square(100px) ;
+			font-size: 100px ;
 			text-align: center ;
 
 			margin: 45px auto ;
@@ -306,6 +347,23 @@ section {
 			width: calc( 100% - 11px ) ;
 		}
 
+		@media (max-width: @screen-sm-max ){
+
+			text-align: center ;
+
+			.media-left {
+				display: block;
+				.media-object {
+					margin: 15px auto ;
+				}
+			}
+
+			.btn {
+				display: block;
+			}
+
+		}
+
 	}
 
 	.panel {
@@ -316,6 +374,8 @@ section {
 
 		position: relative ;
 		max-width: @screen-sm ;
+
+		margin-top: 50px ;
 
 		padding: 15px ;
 
@@ -385,33 +445,57 @@ section {
 
 	&.alt-color-set-01 {
 		background-color: @brand-primary;
-		color: white ;
+		color: @text-color-inv ;
 		font-weight: 200 ;
-		margin-bottom: 0 ;
-		padding-bottom: 50px ;
-		padding-top: 25px ;
+
+		a:hover {
+			color: @link-hover-color-inv ;
+		}
 
 		& + section {
-			padding-top: 50px ;
-			margin-top: 0 ;
+
+		}
+
+	}
+
+	&.alt-color-set-02 {
+		background-color: #070709 ; // extract(@grad-colors,5);
+		color: rgba(255,255,255,0.7) ; // @text-color-inv ;
+		font-weight: 200 ;
+
+		a:hover {
+			color: @link-hover-color-inv ;
+		}
+
+		& + section {
+
 		}
 
 	}
 
 	&.alt-earth-mod {
-		padding-bottom: 50px ;
+
+		padding-bottom: 60px ;
 		background-color: #070709 ;
 		color: rgba(255,255,255,0.7) ;
+
 		p {
 			font-weight: 200 ;
 		}
+
 		.img-with-caption {
+				margin-top: 0 ;
 				box-shadow: none ;
 
 				.caption {
 					border-radius: 6px ;
 				}
 		}
+
+		blockquote {
+			font-size: floor( @blockquote-font-size * 0.9 ) ;
+		}
+
 	}
 
 }
@@ -423,39 +507,4 @@ footer {
 	}
 
 	font-size: 80% ;
-}
-
-@media (max-width: @screen-sm-max ){
-
-	h1 ,
-	header .punch-line {
-		font-size:  floor((@font-size-h1 * 0.8)); ;
-	}
-
-}
-
-@media (max-width: @screen-xs-max ){
-
-	h1 ,
-	header .punch-line {
-		font-size:  floor((@font-size-h1 * 0.6)); ;
-	}
-
-	.media {
-
-		text-align: center ;
-
-		.media-left {
-			display: block;
-			.media-object {
-				margin: 15px auto ;
-			}
-		}
-
-		.btn {
-			display: block;
-		}
-
-	}
-
 }
