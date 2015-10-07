@@ -179,6 +179,6 @@ gulp.task('deploy', function() {
   return gulp.src('./dist/**/*')
     .pipe(ghPages({
       branch : 'master',
-      message: 'release 0.1.0'
+      message: 'release 0.1.1'
     }));
 });
